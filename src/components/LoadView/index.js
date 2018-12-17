@@ -23,6 +23,6 @@ export default props => (
         <Cross num={i} key={i} />
       ))}
     </Frame>
-    <Eyes />
+    <Eyes onAnimationEnd={() => props.changeChapter()} />
   </Container>
 )
