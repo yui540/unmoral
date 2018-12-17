@@ -1,6 +1,7 @@
 import React from 'react'
 import LoadView from '../../containers/LoadView'
 import Opening from '../../containers/Opening'
+import Index from '../../containers/Index'
 
 export default props => {
   const { chapter } = props
@@ -11,6 +12,6 @@ export default props => {
     case 'opening':
       return <Opening />
     case 'top':
-      return <h1>open: top-page</h1>
+      return <Index />
   }
 }
