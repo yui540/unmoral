@@ -24,12 +24,7 @@ export default props => (
     </Frame>
     <Eyes>
       <div />
-      <div
-        onAnimationEnd={e => {
-          console.log(e)
-          props.changeChapter()
-        }}
-      />
+      <div onAnimationEnd={e => props.changeChapter()} />
     </Eyes>
   </Container>
 )
