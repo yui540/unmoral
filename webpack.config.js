@@ -26,9 +26,6 @@ module.exports = {
       },
     ],
   },
-  externals: {
-    createjs: 'createjs',
-  },
   devServer: {
     historyApiFallback: true,
     contentBase: `${__dirname}/public`,
