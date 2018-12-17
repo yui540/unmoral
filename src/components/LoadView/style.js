@@ -376,26 +376,25 @@ export const Eyes = styled.div`
   width: 100%;
   height: 100%;
 
-  &::before,
-  &::after {
+  div {
     content: '';
     display: block;
     width: 100%;
     height: 50%;
     background-color: ${black};
   }
-  &::before {
+  div:nth-child(1) {
     transform: translateY(-100%);
   }
-  &::after {
+  div:nth-child(2) {
     transform: translateY(100%);
   }
 
   /* animation */
-  &::before {
+  div:nth-child(1) {
     animation: ${slideBottom} 1.2s ${easeOutCirc} 3.2s forwards;
   }
-  &::after {
+  div:nth-child(2) {
     animation: ${slideTop} 1.2s ${easeOutCirc} 3.2s forwards;
   }
 `

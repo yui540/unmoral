@@ -3,4 +3,4 @@ node_modules/
 yarn-error.log
 
 public/index.js
-public/images/
+public/images/other
