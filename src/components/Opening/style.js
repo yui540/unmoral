@@ -191,6 +191,10 @@ export const Canvas = styled.canvas`
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+
+  /* animation */
+  animation: ${fadein} 1s ease 0s forwards;
 `
 
 export const Overlay = styled.div`
