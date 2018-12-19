@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Modal from '../Modal'
+import { twitter, facebook, line } from '../../config/shareLink'
 import { startAnimation, stopAnimation } from '../../canvas/top'
 import {
   Container,
@@ -60,7 +61,14 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
+    const { closeMenu } = this.props
+
     startAnimation(this.canvas)
+    closeMenu()
+  }
+
+  componentWillUnmount() {
+    stopAnimation()
   }
 
   toggleMenu() {
@@ -115,9 +123,9 @@ export default class Index extends Component {
           ))}
           <ShareWrapper data-open={isMenu} data-state={isOpen}>
             <img src='./images/menu/share.png' alt='シェア' />
-            <a href='#' target='_blank' className='fab fa-twitter' />
-            <a href='#' target='_blank' className='fab fa-facebook-f' />
-            <a href='#' target='_blank' className='fab fa-line' />
+            <a href={twitter} target='_blank' className='fab fa-twitter' />
+            <a href={facebook} target='_blank' className='fab fa-facebook-f' />
+            <a href={line} target='_blank' className='fab fa-line' />
           </ShareWrapper>
         </MenuWrapper>
         <MenuButton data-state={isOpen} onClick={this.toggleMenu.bind(this)}>
