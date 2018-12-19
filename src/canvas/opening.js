@@ -11,9 +11,9 @@ export const startAnimation = _canvas => {
   canvas.height = document.documentElement.clientHeight
   ;(function tick() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    ;[...Array(6).keys()].forEach(i => {
+    ;[...Array(3).keys()].forEach(i => {
       const width = (canvas.width / 4) * Math.random()
-      const height = 3 * Math.random()
+      const height = Math.random() * 2
       const x = canvas.width * Math.random()
       const y = canvas.height * Math.random()
 
