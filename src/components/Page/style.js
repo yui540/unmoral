@@ -363,8 +363,6 @@ export const Content = styled.div`
 `
 
 export const Body = styled.article`
-  padding-top: 1000px;
-
   ${pcLayout(`
     margin-left: 240px;
     width: calc(100% - 290px);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import Footer from '../Footer'
+import News from '../../containers/News'
 import { twitter, facebook, line } from '../../config/shareLink'
 import {
   Container,
@@ -99,7 +100,9 @@ export default class Page extends Component {
         <Copyright />
         <Content>
           <Body>
-            <section />
+            <section>
+              <Route path='/news' component={News} />
+            </section>
             <Footer />
           </Body>
         </Content>
