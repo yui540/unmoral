@@ -1,32 +1,31 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Modal from '../Modal'
+import Footer from '../Footer'
 import { twitter, facebook, line } from '../../config/shareLink'
-import { startAnimation, stopAnimation } from '../../canvas/top'
 import {
   Container,
-  MainVisual,
-  Canvas,
-  Noise,
-  Overlay,
-  LogoWrapper,
-  Logo,
-  PanelWrapper,
-  Panel,
-  PanelSP,
   MenuWrapper,
+  Icon,
+  Color,
   Menu,
-  MenuFrame,
   ShareWrapper,
+  Copyright,
+  Content,
+  Body,
+  Overlay,
   Frame,
+  MenuWrapperSP,
+  MenuFrame,
+  MenuSP,
+  ShareWrapperSP,
   MenuButton,
   MenuButtonFrame,
   MenuButtonBg,
   MenuButtonLine,
-  MessageWrapper,
-  Message,
+  Top,
 } from './style'
 
+const colorList = [1, 4, 3, 1, 4, 3, 2, 3, 2, 1, 3, 4, 3, 2, 1, 2]
 const menuList = [
   {
     title: 'news',
@@ -50,25 +49,13 @@ const menuList = [
   },
 ]
 
-export default class Index extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      rotateX: 0,
-      rotateY: 0,
-    }
-  }
-
+export default class Page extends Component {
   componentDidMount() {
-    const { closeMenu } = this.props
+    const { changeChapter, closeModal, closeMenu } = this.props
 
-    startAnimation(this.canvas)
+    closeModal()
     closeMenu()
-  }
-
-  componentWillUnmount() {
-    stopAnimation()
+    changeChapter()
   }
 
   toggleMenu() {
@@ -79,37 +66,18 @@ export default class Index extends Component {
   }
 
   render() {
-    const { isOpen, closeModal, isMenu } = this.props
-    const { rotateX, rotateY } = this.state
+    const { isMenu, openMenu, closeMenu } = this.props
+    const path = this.props.match.path
 
     return (
       <Container>
-        <MainVisual />
-        <Canvas ref={canvas => (this.canvas = canvas)} />
-        <Noise />
-        <Frame>
-          <div />
-          <div>
-            <img src='./images/copyright.png' alt='copyright' />
-          </div>
-        </Frame>
-        <Overlay />
-        <LogoWrapper>
-          <Logo data-state={isOpen} src='./images/logo.png' alt='ロゴ' />
-        </LogoWrapper>
-        <PanelWrapper>
-          <Panel data-state={isOpen} src='./images/panel.png' alt='リリース' />
-          <PanelSP data-state={isOpen} src='./images/panel__sp.png' alt='リリース' />
-        </PanelWrapper>
-        <MessageWrapper>
-          <Message data-state={isOpen} src='./images/message.png' alt='これは、愛情表現？' />
-        </MessageWrapper>
-        <MenuWrapper data-open={isMenu} data-state={isOpen}>
-          <MenuFrame>
-            <div />
-            <div />
-            <div />
-          </MenuFrame>
+        <MenuWrapper>
+          <Icon>
+            {colorList.map((i, key) => (
+              <Color num={i} key={key} />
+            ))}
+            <Link to='/' />
+          </Icon>
           {menuList.map((menu, key) => (
             <Menu key={key}>
               <Link to={`/${menu.title}`}>
@@ -121,14 +89,57 @@ export default class Index extends Component {
               </Link>
             </Menu>
           ))}
-          <ShareWrapper data-open={isMenu} data-state={isOpen}>
+          <ShareWrapper>
             <img src='./images/menu/share.png' alt='シェア' />
             <a href={twitter} target='_blank' className='fab fa-twitter' />
             <a href={facebook} target='_blank' className='fab fa-facebook-f' />
             <a href={line} target='_blank' className='fab fa-line' />
           </ShareWrapper>
         </MenuWrapper>
-        <MenuButton data-state={isOpen} onClick={this.toggleMenu.bind(this)}>
+        <Copyright />
+        <Content>
+          <Body>
+            <section />
+            <Footer />
+          </Body>
+        </Content>
+        <Overlay />
+        <Frame>
+          <div />
+          <div />
+          <div />
+          <div />
+        </Frame>
+        <MenuWrapperSP data-open={isMenu}>
+          <MenuFrame>
+            <div />
+            <div />
+            <div />
+          </MenuFrame>
+          <Top>
+            <Link to='/'>
+              <img src='./images/logo.png' alt='top' />
+            </Link>
+          </Top>
+          {menuList.map((menu, key) => (
+            <MenuSP key={key} data-match={path === `/${menu.title}`}>
+              <Link to={`/${menu.title}`}>
+                <div />
+                <div />
+                <div />
+                <div />
+                <img src={menu.img} alt='' />
+              </Link>
+            </MenuSP>
+          ))}
+          <ShareWrapperSP data-open={isMenu}>
+            <img src='./images/menu/share.png' alt='シェア' />
+            <a href={twitter} target='_blank' className='fab fa-twitter' />
+            <a href={facebook} target='_blank' className='fab fa-facebook-f' />
+            <a href={line} target='_blank' className='fab fa-line' />
+          </ShareWrapperSP>
+        </MenuWrapperSP>
+        <MenuButton onClick={this.toggleMenu.bind(this)}>
           <MenuButtonBg>
             <div />
             <div />
@@ -147,7 +158,6 @@ export default class Index extends Component {
             <div />
           </MenuButtonLine>
         </MenuButton>
-        <Modal closeModal={closeModal} isOpen={isOpen} />
       </Container>
     )
   }
