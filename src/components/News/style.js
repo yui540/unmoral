@@ -53,7 +53,7 @@ export const List = styled.section`
   }
 
   h3 {
-    color: #444;
+    color: #666;
     letter-spacing: 0.2em;
 
     ${pcLayout(`
