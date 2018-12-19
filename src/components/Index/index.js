@@ -2,16 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Modal from '../Modal'
 import { startAnimation, stopAnimation } from '../../canvas/top'
-import logo from '../../images/logo.svg'
-import panel from '../../images/panel.svg'
-import panelSP from '../../images/panel__sp.svg'
-import news from '../../images/menu/news.svg'
-import intro from '../../images/menu/intro.svg'
-import movie from '../../images/menu/movie.svg'
-import character from '../../images/menu/chara.svg'
-import staff from '../../images/menu/staff.svg'
-import share from '../../images/menu/share.svg'
-import copyright from '../../images/copyright.svg'
 import {
   Container,
   MainVisual,
@@ -39,23 +29,23 @@ import {
 const menuList = [
   {
     title: 'news',
-    img: news,
+    img: './images/menu/news.png',
   },
   {
     title: 'introduction',
-    img: intro,
+    img: './images/menu/intro.png',
   },
   {
     title: 'movie',
-    img: movie,
+    img: './images/menu/movie.png',
   },
   {
     title: 'character',
-    img: character,
+    img: './images/menu/chara.png',
   },
   {
     title: 'staffcast',
-    img: staff,
+    img: './images/menu/staff.png',
   },
 ]
 
@@ -92,16 +82,16 @@ export default class Index extends Component {
         <Frame>
           <div />
           <div>
-            <img src={copyright} alt='copyright' />
+            <img src='./images/copyright.png' alt='copyright' />
           </div>
         </Frame>
         <Overlay />
         <LogoWrapper>
-          <Logo data-state={isOpen} src={logo} alt='ロゴ' />
+          <Logo data-state={isOpen} src='./images/logo.png' alt='ロゴ' />
         </LogoWrapper>
         <PanelWrapper>
-          <Panel data-state={isOpen} src={panel} alt='リリース' />
-          <PanelSP data-state={isOpen} src={panelSP} alt='リリース' />
+          <Panel data-state={isOpen} src='./images/panel.png' alt='リリース' />
+          <PanelSP data-state={isOpen} src='./images/panel__sp.png' alt='リリース' />
         </PanelWrapper>
         <MessageWrapper>
           <Message data-state={isOpen} src='./images/message.png' alt='これは、愛情表現？' />
@@ -124,7 +114,7 @@ export default class Index extends Component {
             </Menu>
           ))}
           <ShareWrapper data-open={isMenu} data-state={isOpen}>
-            <img src={share} alt='シェア' />
+            <img src='./images/menu/share.png' alt='シェア' />
             <a href='#' target='_blank' className='fab fa-twitter' />
             <a href='#' target='_blank' className='fab fa-facebook-f' />
             <a href='#' target='_blank' className='fab fa-line' />
