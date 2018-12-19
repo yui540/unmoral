@@ -381,11 +381,26 @@ export const Body = styled.article`
     background-repeat: no-repeat;
   `)}
 
-  section {
-    opacity: 0;
+  & > section {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 30px;
+      background-color: #fff;
+      border-bottom: solid 1px #000;
+
+      ${pcLayout(`display: none;`)}
+    }
+
+    & > div {
+      opacity: 0;
+    }
 
     /* animation */
-    animation: ${showPage} 2s ease 0s forwards;
+    & > div {
+      animation: ${showPage} 2s ease 0s forwards;
+    }
   }
 `
 

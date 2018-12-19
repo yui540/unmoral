@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import Footer from '../Footer'
 import News from '../../containers/News'
 import Intro from '../Intro'
+import Movie from '../Movie'
 import { twitter, facebook, line } from '../../config/shareLink'
 import {
   Container,
@@ -104,6 +105,7 @@ export default class Page extends Component {
             <section>
               <Route path='/news' component={News} />
               <Route path='/introduction' component={Intro} />
+              <Route path='/movie' component={Movie} />
             </section>
             <Footer />
           </Body>
