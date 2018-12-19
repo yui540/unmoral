@@ -59,3 +59,8 @@ export const turn = keyframes`
   from { transform: rotate(0); }
   to   { transform: rotate(-1turn); }
 `
+
+export const showPage = keyframes`
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+`

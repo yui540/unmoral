@@ -11,6 +11,7 @@ import {
   fly,
   showMenuButton,
   turn,
+  showPage,
 } from './keyframes'
 import { fadein, fadeout, slideTop } from '../../common-keyframes'
 import { easeInOutSine, easeOutCirc, easeInOutCubic } from '../../easing'
@@ -379,6 +380,13 @@ export const Body = styled.article`
     background-size: 90% auto;
     background-repeat: no-repeat;
   `)}
+
+  section {
+    opacity: 0;
+
+    /* animation */
+    animation: ${showPage} 2s ease 0s forwards;
+  }
 `
 
 export const Overlay = styled.div`
