@@ -4,6 +4,7 @@ import Footer from '../Footer'
 import News from '../../containers/News'
 import Intro from '../Intro'
 import Movie from '../Movie'
+import Character from '../Character'
 import StaffCast from '../StaffCast'
 import { twitter, facebook, line } from '../../config/shareLink'
 import {
@@ -107,6 +108,7 @@ export default class Page extends Component {
               <Route path='/news' component={News} />
               <Route path='/introduction' component={Intro} />
               <Route path='/movie' component={Movie} />
+              <Route path='/character' component={Character} />
               <Route path='/staffcast' component={StaffCast} />
             </section>
             <Footer />
