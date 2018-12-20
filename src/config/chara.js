@@ -5,7 +5,7 @@ export default {
     pic: './images/character/pic/mitsuki.jpg',
     profile: `笑顔がまぶしい明朗快活な少女。
     運動神経がずば抜けている。
-    ハロを魔改造しちゃうくらいには頭も良い。
+    ロロを魔改造しちゃうくらいには頭も良い。
     その能力を評価され最年少で警備課特殊部隊へと入隊する。`,
     prev: 'amor',
     next: 'lolo',
