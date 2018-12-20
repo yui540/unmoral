@@ -3,7 +3,9 @@ import { pcLayout, spLayout } from '../../breakpoint'
 import { fadein1, fadein2, fadein3, hover } from './keyframes'
 import { themeColor1, themeColor2, themeColor3, themeColor4 } from '../../color'
 
-export const Container = styled.div``
+export const Container = styled.div`
+  overflow: hidden;
+`
 
 export const Title = styled.div`
   ${pcLayout(`padding: 80px 0;`)}
