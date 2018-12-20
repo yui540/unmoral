@@ -541,7 +541,7 @@ export const Menu = styled.div`
       left: -1vh;
       width: calc(100% + 2vh);
       height: 100%;
-      background-color: ${white};
+      background-color: #ff575f;
       transform: scale(0);
       transition: 0.25s ease-in-out 0s;
     }
