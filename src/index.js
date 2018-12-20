@@ -11,7 +11,12 @@ import preloadImages from './config/preloadImages'
 preload(
   preloadImages,
   () => {
-    console.log('[running] unmoral official website.')
+    console.log(`[running] unmoral official website.`)
+    console.log(`[message] 初めまして、このサイトを制作したyui540だよ。`)
+    console.log(`[message] このメッセージをみてるってことは、僕と同業者の人かな...？`)
+    console.log(`[message] 内向的だから、あんまり人と絡まないけど仲良くしてね。`)
+    console.log(`[message] 実はこのサイト、OSSでGitHubに公開してるので気になったら見てみてね。`)
+    console.log(`[message] じゃーねー。`)
     console.log(`[repository] ${github}`)
   },
   () => {}
