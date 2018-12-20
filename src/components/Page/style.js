@@ -46,6 +46,7 @@ export const MenuWrapper = styled.div`
   justify-content: center;
   overflow: auto;
   perspective: 500px;
+  z-index: 10;
 
   ${spLayout(`display: none;`)}
 
@@ -368,7 +369,7 @@ export const Body = styled.article`
     margin-left: 240px;
     width: calc(100% - 290px);
     background-image: url(./images/bg-mitsuki.png);
-    background-position: right -10%;
+    background-position: right top;
     background-size: 50% auto;
     background-repeat: no-repeat;
   `)}
@@ -376,7 +377,7 @@ export const Body = styled.article`
   ${spLayout(`
     width: 100%;
     background-image: url(./images/bg-mitsuki.png);
-    background-position: right 20%;
+    background-position: right top;
     background-size: 90% auto;
     background-repeat: no-repeat;
   `)}
@@ -421,6 +422,7 @@ export const Frame = styled.div`
     position: fixed;
     background-color: ${black};
     transform: rotate(45deg);
+    z-index: 100;
 
     ${pcLayout(`
       width: 40px;
@@ -811,6 +813,7 @@ export const MenuButton = styled.button`
   width: 20vw;
   height: 20vw;
   padding: 0;
+  z-index: 101;
 
   ${pcLayout(`display: none;`)}
 
