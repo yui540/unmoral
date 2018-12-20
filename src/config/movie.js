@@ -1,12 +1,7 @@
 export default [
   {
-    title: '本編PV',
-    url: '',
-    thumb: './images/movie/noimage.png',
-  },
-  {
-    title: '本編PV',
-    url: '',
-    thumb: './images/movie/noimage.png',
+    title: 'unmoral shortPV',
+    url: 'https://www.youtube.com/watch?v=vrEinCVsMhg',
+    thumb: './images/movie/pv.png',
   },
 ]

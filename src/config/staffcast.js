@@ -26,7 +26,7 @@ export default {
     },
     {
       job: 'ニュースキャスター',
-      name: ['未定'],
+      name: ['透乃 依子'],
     },
   ],
   staff: [

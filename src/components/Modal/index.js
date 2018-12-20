@@ -13,7 +13,7 @@ export default props => (
       </Frame>
       <Video>
         <iframe
-          src='https://www.youtube.com/embed/svP4F3HH9Qk'
+          src='https://www.youtube.com/embed/vrEinCVsMhg'
           frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
         />
