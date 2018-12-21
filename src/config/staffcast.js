@@ -59,7 +59,7 @@ export default {
       name: ['雨宮 舟生'],
     },
     {
-      job: 'System Administrator',
+      job: 'サーバーエンジニア',
       name: ['皆川 大樹'],
     },
     {
