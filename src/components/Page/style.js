@@ -336,6 +336,7 @@ export const Copyright = styled.div`
   height: 100%;
   background-color: #fff;
   border-left: solid 1px ${fontColor};
+  z-index: 11;
 
   ${spLayout(`display: none;`)}
 

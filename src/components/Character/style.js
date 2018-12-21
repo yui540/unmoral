@@ -91,13 +91,13 @@ export const CharaProfile = styled.div`
   ${pcLayout(`display: flex;`)}
 
   &[data-state=mitsuki] {
-    animation: ${fadein1} 1.4s ease 0.2s forwards;
+    animation: ${fadein1} 1.4s ease 0s forwards;
   }
   &[data-state='lolo'] {
-    animation: ${fadein2} 1.4s ease 0.2s forwards;
+    animation: ${fadein2} 1.4s ease 0s forwards;
   }
   &[data-state='amor'] {
-    animation: ${fadein3} 1.4s ease 0.2s forwards;
+    animation: ${fadein3} 1.4s ease 0s forwards;
   }
 `
 
@@ -228,8 +228,10 @@ export const Frame = styled.div`
 `
 
 export const ControlButton = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 
   ${pcLayout(`
     width: 500px;
