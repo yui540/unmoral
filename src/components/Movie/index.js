@@ -11,7 +11,7 @@ export default props => (
       {movieList.map((data, key) => (
         <Movie href={data.url} target='_blank' key={key}>
           <ThumbWrapper>
-            <Thumb src={data.thumb} alt={data.title} />
+            <Thumb src={data.thumbnail} alt={data.title} />
           </ThumbWrapper>
           <MovieTitle>{data.title}</MovieTitle>
         </Movie>
