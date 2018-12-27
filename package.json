@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build-post:news": "node scripts/build-news",
+    "build-post:movie": "node scripts/build-movie",
     "build-post": "npm-run-all build-post:*",
     "build:dev": "cross-env MODE=development webpack",
     "build:prod": "cross-env MODE=production webpack",
