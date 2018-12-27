@@ -19,7 +19,7 @@ files.forEach(file => {
   console.log(data)
   news.push(data)
 })
-fs.writeFileSync(CONFIG_PATH, `export default ${JSON.stringify(news, null, '  ')}`, {
+fs.writeFileSync(CONFIG_PATH, `export default ${JSON.stringify(news.reverse(), null, '  ')}`, {
   encoding: 'utf8',
 })
 console.log('finished!')
