@@ -12,7 +12,10 @@ export default class News extends Component {
         <Wrapper>
           {newsList.map((data, key) => (
             <List key={key}>
-              <img src={data.thumb} alt={data.title} />
+              <img
+                src={data.thumbnail ? data.thumbnail : '/images/news/noimage.png'}
+                alt={data.title}
+              />
               <div>
                 <h3>{data.title}</h3>
                 <span>{data.date}</span>
