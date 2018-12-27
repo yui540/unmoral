@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: "public/uploads"
+public_folder: "/uploads"
+publish_mode: "editorial_workflow"
+display_url: "https://unmoral.cgmovie.art"
+logo_url: "https://unmoral.cgmovie.art/images/logo.png"
+collections:
+  - name: "news"
+    label: "NEWS"
+    folder: "posts/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: 'json'
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+    editor:
+      preview: false
