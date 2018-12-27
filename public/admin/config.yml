@@ -18,7 +18,7 @@ collections:
     sort: "date:desc"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY.mm.dd"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
     editor:
       preview: false
