@@ -53,6 +53,7 @@ export const List = styled.section`
   }
 
   h3 {
+    word-break: break-word;
     color: #666;
     letter-spacing: 0.2em;
 
